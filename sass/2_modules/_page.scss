@@ -1,0 +1,125 @@
+@use '../1_foundations/colours' as *;
+@use '../1_foundations/fonts' as *;
+@use '../1_foundations/spacing' as *;
+
+main {
+    background-color: var(--c-neutral-white);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-32);
+    margin: 0 auto;
+    padding-bottom: var(--s-32);
+}
+
+div, header {
+    margin-inline: var(--s-32);
+
+    &:not(:last-child, header, .preparation) {
+        border-bottom: 1px solid var(--c-neutral-light_gray);
+        padding-bottom: var(--s-32);
+    }
+
+    & > h1 {
+        margin-bottom: var(--s-24);
+    }
+}
+
+.preparation {
+    padding: var(--s-20) var(--s-24);
+    background-color: var(--c-neutral-rose_white);
+    border-radius: var(--s-16);
+
+    .h3 {
+        color: var(--c-primary-dark_raspberry);
+        margin-bottom: var(--s-12);
+    }
+
+    li::marker {
+        color: var(--c-primary-dark_raspberry);
+    }
+}
+
+ul, ol {
+    padding-left: var(--s-24);
+
+    & > li {
+        padding-left: var(--s-12);
+    }
+
+    li:not(:last-child) {
+        margin-bottom: var(--s-8);
+    }
+
+    li::marker:not(ol > li) {
+        color: var(--c-primary-nutmeg);
+        width: .25rem;
+        font-size: .75rem;
+    }
+}
+
+ol li::marker {
+    color: var(--c-primary-nutmeg);
+    font-weight: 600;
+}
+
+table {
+    margin-top: var(--s-24);
+    width: 100%;
+    padding-inline: var(--s-32);
+    text-align: left;
+    border-collapse: collapse;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid var(--c-neutral-light_gray);
+}
+
+th {
+    font-weight: 400;
+    padding: var(--s-12) 0 var(--s-12) var(--s-32);
+}
+
+td {
+    font-weight: 600;
+    color: var(--c-primary-nutmeg);
+    padding: var(--s-12) var(--s-32) var(--s-12) 0;
+}
+
+footer {
+    background-color: var(--c-primary-dark_raspberry);
+    display: flex;
+    flex-direction: column;
+    padding: var(--s-12);
+    text-align: center;
+
+    & > p {
+        color: var(--c-neutral-white);
+
+        & > a {
+            color: var(--c-neutral-eggshell);
+            font-weight: 600;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media (min-width: 48rem) {
+    main {
+        max-width: 46rem;
+        margin: 7.625rem auto;
+        padding: var(--s-40);
+        border-radius: var(--s-24);
+    
+        & > img {
+            border-radius: var(--s-12);
+        }
+    }
+
+    div, header {
+        margin-inline: unset
+    }
+}
