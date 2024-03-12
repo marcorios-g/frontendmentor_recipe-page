@@ -77,4 +77,4 @@ I want to continue learning how to build semantic and responsive tables, since t
 ## Author
 
 - Frontend Mentor - [@marcorios-g](https://www.frontendmentor.io/profile/marcorios-g)
-- Twitter - [@marcorios-g](https://github.com/marcorios-g)
+- Github - [@marcorios-g](https://github.com/marcorios-g)
